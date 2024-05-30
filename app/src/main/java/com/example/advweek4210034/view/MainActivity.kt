@@ -60,8 +60,9 @@ class MainActivity : AppCompatActivity() {
                 if(grantResults.isNotEmpty() && grantResults[0]== PackageManager.PERMISSION_GRANTED)
                 {
                     Log.d("permission", "granted")
-                    //createNotifChannel(this, NotificationManagerCompat.IMPORTANCE_DEFAULT, false,
-                    //    "Notification channel for creating new student")
+                    createNotificationChannel(this,
+                        NotificationManagerCompat.IMPORTANCE_DEFAULT, false,
+                        getString(R.string.app_name), "App notification channel.")
 
                 } else {
                     Log.d("permission", "not granted")

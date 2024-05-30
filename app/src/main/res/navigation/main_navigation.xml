@@ -18,5 +18,8 @@
         android:id="@+id/studentDetailFragment"
         android:name="com.example.advweek4210034.view.StudentDetailFragment"
         android:label="Student Detail"
-        tools:layout="@layout/fragment_student_detail" />
+        tools:layout="@layout/fragment_student_detail" >
+        <argument android:name="studentID"
+            app:argType="string" />
+    </fragment>
 </navigation>

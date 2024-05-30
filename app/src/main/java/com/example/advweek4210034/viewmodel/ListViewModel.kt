@@ -26,7 +26,7 @@ class ListViewModel(application: Application): AndroidViewModel(application) {
         loadingLD.value = true
         studentLoadErrorLD.value = false
 
-        queue = Volley.newRequestQueue(getApplication())
+        /*queue = Volley.newRequestQueue(getApplication())
         val url = "http://adv.jitusolution.com/student.php"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
@@ -41,21 +41,22 @@ class ListViewModel(application: Application): AndroidViewModel(application) {
             },
             {
                 Log.d("showvoley", it.toString())
+                Log.d("showvoley", "timeout xx")
                 studentLoadErrorLD.value = false
                 loadingLD.value = false
             })
 
         stringRequest.tag = TAG
-        queue?.add(stringRequest)
+        queue?.add(stringRequest)*/
 
-        /*studentsLD.value = arrayListOf(
+        studentsLD.value = arrayListOf(
             Student("16055","Nonie","1998/03/28","5718444778","http://dummyimage.com/75x100" +
                     ".jpg/cc0000/ffffff"),
             Student("13312","Rich","1994/12/14","3925444073","http://dummyimage.com/75x100" +
                     ".jpg/5fa2dd/ffffff"),
             Student("11204","Dinny","1994/10/07","6827808747",
                 "http://dummyimage.com/75x100.jpg/5fa2dd/ffffff1")
-        )*/
+        )
 
         studentLoadErrorLD.value = false
         loadingLD.value = false
